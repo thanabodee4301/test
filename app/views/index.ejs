@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<title>login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+        .table-wrapper {
+            margin-top: 50px;
+        }
+</style>
+<body>
+
+    <div class="w3-container w3-blue">
+   <center><label>กรอกชื่อของคุณ</label></center>
+   </div>
+      <center>                         
+<% if(Islogin==false){ %>
+   <form name ="login" method="POST" action="/read">
+   <table class="w3-table">
+    <tr>FirstName</tr>
+    <td><input type="text" name="yourname" class="w3-input" required></td>
+    <tr>password</tr>
+    <td><input type="password" name="password" class="w3-input" required></td>
+    </tr>
+   </table>
+   <input type="checkbox" name="remember" value="remember">Remember Me</input>
+    <button type="submit" class='btn btn-success btn-lg'>ENTER</button>
+   </form>
+ <% } else { %>  
+   <h1>Welcome</h1>
+   <form name="logout" method="post" action="logout">
+   <button type="submit" class='btn btn-success btn-lg'>EXIT</button>
+   </form>
+<% } %>
+ 
+<div id='mainApp' ng-include="'/modules/hello/view/hello.client.view.ejs'" ng-strict-id>
+</div>
+<script type='text/javascript' src='/lib/angular/angular.min.js'></script>
+<script type='text/javascript' src='/modules/hello/hello.client.module.js'></script>
+<script type='text/javascript' src='/application.js'></Script>
+</body>

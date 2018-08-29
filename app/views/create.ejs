@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<title>testEJS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+        .table-wrapper {
+            margin-top: 50px;
+        }
+</style>
+<body>
+
+<div class="w3-container w3-teal">
+  <center><h1>เพิ่มข้อความของคุณ</h1></center>
+</div>
+<div class="w3-container">
+  
+ <center>
+     <form action="/create" method="post">
+      <table border="3">
+          <thead>
+            <tr>
+            
+              <th>ข้อความ</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+             
+    
+              <td>  <input type="hidden" name="number"> <input type="text"  name="utext"></td>
+                  </tr>
+              </tbody>
+              </table>
+
+     <button type="submit" class="btn btn-success btn-lg" onclick="myfunction()">บันทึก</button><a href="/" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-arrow-left"></span>กลับหน้าหลัก</a>                                                                       
+    </form>  
+   
+        </center>
+        
+</div>
+
+<div class="w3-container w3-teal">
+
+</div>
+<script>
+  function myfunction()
+  {
+    "บันทึกเรียบร้อย"
+  }
+  </script>
+</body>
+</html> 
+                    

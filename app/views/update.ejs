@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<title>testEJS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+        .table-wrapper {
+            margin-top: 50px;
+        }
+</style>
+<body>
+
+<div class="w3-container w3-teal">
+  <center><h1>แก้ไขข้อความ</h1></center>
+</div>
+<div class="w3-container">
+  
+ <center>
+     
+     <form action="/update/<%=data[0].ID%>" method="POST">
+     <input type="hidden" name="number" value="<%=data[0].ID%>">
+    <label> ข้อความ
+     <input type="text" name="utext" value="<%=data[0].yourtext%>">
+     <button type="submit" class="btn btn-success btn-lg" onclick="myfunction()">บันทึก</button>
+  </center>
+    </form>
+
+  
+        
+
+
+<div class="w3-container w3-teal">
+  <center><p><a href="/">กลับหน้าหลัก</p>
+    </center>
+</div>
+<script>
+  function myfunction()
+  {
+    alert("บันทึกข้ออความเรียบร้อย");
+  }
+  </script>
+</body>
+</html> 
+                    

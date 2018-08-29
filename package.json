@@ -1,0 +1,27 @@
+{
+  "name": "mytest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "bower": "^1.8.4",
+    "compression": "^1.5.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "express-validator": "^2.14.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.6.0",
+    "mysql": "^2.16.0",
+    "pug": "^2.0.3",
+    "mongoose": "^3.9.7",
+    "passport":"^0.4.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

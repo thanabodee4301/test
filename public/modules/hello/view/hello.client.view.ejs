@@ -1,0 +1,8 @@
+<div ng-controller='NameController'>
+    <div>
+        <label>Your Name </label>
+        <input id='yourName' type='text' ng-model='yourName' name='yourName'>
+    </div>
+    <div>
+        {{ yourName | sayhello }}
+    </div>

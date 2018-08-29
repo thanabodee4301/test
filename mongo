@@ -1,0 +1,3 @@
+var mogoose = require('mongoose');
+var uri ='mongodb://localhost/my-project'
+var db = mogoose.connect(uri);
