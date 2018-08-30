@@ -1,0 +1,25 @@
+<div ng-controller='NameController'>
+        <div>
+                <label>รายละเอียดลีค</label>
+                <div>
+                    <input name="myInput" id="myInput" type="text" class="form-control" placeholder="ชื่อทีม">
+                </div>
+                <table class="table table-bordered table-striped" border="2" id="u">
+                    <thead>
+                        <tr>
+                            <th align='center'>ลำดับ</th>
+                            <th align='center'>ชื่อทีม</th>
+                    </thead>
+                    <tbody id="myTable">
+            <% for(var i=0; i< data.length ; i++) {%>      
+                        <tr>
+                            <td><%=i+1%></td>
+                            <td><%=data[i].name%></td>
+                            <td align='center'><button type='button' class="btn btn-success"><span class="glyphicon glyphicon-pencli"><a href="/overall/data[i].league_slug">overall</td>                
+                        </tr>
+            <% } %>              
+                    </tbody>
+                    </table>
+        
+       
+</div>

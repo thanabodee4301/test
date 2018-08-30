@@ -1,0 +1,27 @@
+<div ng-controller='NameController'>
+        <div>
+            <label>ตารางแสดง league</label>
+            <div>
+                <input name="myInput" id="myInput" type="text" class="form-control">
+            </div>
+            <table class="table table-bordered table-striped" border="2" id="u">
+                <thead>
+                    <tr>
+                        <th align="center"><center>ลำดับ</center></th>
+                        <th align="center"><center>ชื่อลีค</center></th>
+                        <th align="center"><center>ประเทศ</center></th>
+                        <th align="center"><center>ทวีป</center></th>
+                </thead>
+                <tbody id="myTable">
+        <% for(var i=0; i< data.length ; i++) {%>      
+                    <tr>
+                        <td><%=i%></td>
+                        <td><a href=""><%=data[i].name%></td>
+                        <td><%=data[i].nation%></td>
+                        <td><%=data[i].federation%></td> 
+                    </tr>
+        <% } %>              
+                </tbody>
+                </table>
+    
+        </div>

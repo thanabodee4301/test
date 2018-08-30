@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SoccerApi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+  <div ng-controller='NameController'>
+      <div>
+          <label>ตารางแสดง league</label>
+          <div>
+              <input name="myInput" id="myInput" type="text" class="form-control" placeholder="ชื่อลีค">
+          </div>
+          <table class="table table-bordered table-striped" border="2" id="u">
+              <thead>
+                  <tr>
+                      <th align='center'>ลำดับ</th>
+                      <th align='center'>ชื่อลีค</th>
+                      <th align='center'>ประเทศ</th>
+                      <th align='center'>ดูรายละเอียด</th>
+              </thead>
+              <tbody id="myTable">
+      <% for(var i=0; i< data.length ; i++) {%>      
+                  <tr>
+                      <td><%=i+1%></td>
+                      <td><%=data[i].name%></td>
+                      <td><%=data[i].nation%></td>
+                      <td align='center'><button type='button' class="btn btn-success"><span class="glyphicon glyphicon-pencli"><a href="/detail/data[i].league_slug">ดูรายละเอียด</td>                
+                  </tr>
+      <% } %>              
+              </tbody>
+              </table>
+  
+      </div>
+
+<script type='text/javascript' src='/lib/angular/angular.min.js'></script>
+<script type='text/javascript' src='/modules/soccer/soccer.client.module.js'></script>
+<script type='text/javascript' src='/application.js'></Script>
+  <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+      </script>
+  
+</body>
+</html>
