@@ -1,8 +1,8 @@
 'use strict';
 var mainAppModuleName = 'main';
-var mainAppmodule = angular.module('mainAppModuleName',['home']);
+var mainAppmodule = angular.module(mainAppModuleName,['home']);
 angular.element(document).ready(()=>{
-    angular.bootstrap(document.querySelector('#mainApp'),['mainAppModuleName'],{
+    angular.bootstrap(document.querySelector('#mainApp'),[mainAppModuleName],{
         strictDi:true
     });
 });

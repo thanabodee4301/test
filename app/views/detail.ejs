@@ -1,25 +1,31 @@
 <div ng-controller='NameController'>
         <div>
-                <label>รายละเอียดลีค</label>
+                <label>ตาราง</label>
                 <div>
                     <input name="myInput" id="myInput" type="text" class="form-control" placeholder="ชื่อทีม">
                 </div>
-                <table class="table table-bordered table-striped" border="2" id="u">
+                <table class="table table-hover">
                     <thead>
-                        <tr>
-                            <th align='center'>ลำดับ</th>
-                            <th align='center'>ชื่อทีม</th>
+                      <tr>
+                        <th>League_slug</th>
+                        <th>League Name</th>
+                        <th>Nation</th>
+                        <th>level</th>
+                        <th>federation</th>
+                      </tr>
                     </thead>
-                    <tbody id="myTable">
-            <% for(var i=0; i< data.length ; i++) {%>      
-                        <tr>
-                            <td><%=i+1%></td>
-                            <td><%=data[i].name%></td>
-                            <td align='center'><button type='button' class="btn btn-success"><span class="glyphicon glyphicon-pencli"><a href="/overall/data[i].league_slug">overall</td>                
-                        </tr>
-            <% } %>              
+                    <tbody>
+                      <tr>
+                        <td><%=data[0].League_slug%></td>
+                        <td><%=data[0].name%></td>
+                        <td><%=data[0].Nation%></td>
+                        <td><%=data[0].level%></td>
+                        <td><%=data[0].federation%></td>
+                      </tr>
+                    
+                     
                     </tbody>
-                    </table>
+                  </table>
         
        
 </div>
